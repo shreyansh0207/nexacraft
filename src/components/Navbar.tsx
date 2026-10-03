@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { DOCS_PDF, NAV_LINKS } from '../lib/constants'
+import { DOCS_PDF, FORM_URL, NAV_LINKS } from '../lib/constants'
 
 function Logo() {
   return (
@@ -112,12 +112,21 @@ export default function Navbar() {
             href={DOCS_PDF}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary hidden !px-5 !py-2.5 text-sm md:inline-flex"
+            className="btn-ghost hidden !px-4 !py-2.5 text-sm xl:inline-flex"
           >
             Docs
-            <span className="rounded-md bg-black/25 px-1.5 py-0.5 font-mono text-[0.55rem] font-bold uppercase tracking-[0.14em]">
+            <span className="rounded-md bg-white/10 px-1.5 py-0.5 font-mono text-[0.55rem] font-bold uppercase tracking-[0.14em] text-muted">
               PDF
             </span>
+          </a>
+          <a
+            href={FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary hidden !px-5 !py-2.5 text-sm md:inline-flex"
+          >
+            Start a Project
+            <span aria-hidden="true">→</span>
           </a>
           <button
             type="button"
@@ -172,21 +181,34 @@ export default function Navbar() {
               </span>
             </a>
           ))}
-          <a
-            href={DOCS_PDF}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setOpen(false)}
-            className={`btn-primary mt-8 justify-center transition-all duration-500 ${
+          <div
+            className={`mt-8 flex flex-col gap-3 transition-all duration-500 ${
               open ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
             }`}
             style={{ transitionDelay: open ? '560ms' : '0ms' }}
           >
-            Docs — Everything We Offer
-            <span className="rounded-md bg-black/25 px-1.5 py-0.5 font-mono text-[0.55rem] font-bold uppercase tracking-[0.14em]">
-              PDF
-            </span>
-          </a>
+            <a
+              href={DOCS_PDF}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="btn-ghost justify-center !py-3 text-sm"
+            >
+              Docs — Everything We Offer
+              <span className="rounded-md bg-white/10 px-1.5 py-0.5 font-mono text-[0.55rem] font-bold uppercase tracking-[0.14em] text-muted">
+                PDF
+              </span>
+            </a>
+            <a
+              href={FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="btn-primary justify-center !py-3 text-sm"
+            >
+              Start a Project <span aria-hidden="true">→</span>
+            </a>
+          </div>
         </nav>
       </div>
     </header>
