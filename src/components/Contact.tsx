@@ -1,5 +1,5 @@
 import Reveal from './Reveal'
-import { FORM_URL } from '../lib/constants'
+import { EMAIL, FORM_URL } from '../lib/constants'
 
 export default function Contact() {
   return (
@@ -40,6 +40,21 @@ export default function Contact() {
               <span className="h-1.5 w-1.5 rounded-full bg-neon" />
               Opens our project brief in a new tab
             </p>
+            <a
+              href={`mailto:${EMAIL}`}
+              className="group inline-flex items-center gap-2.5 text-sm text-muted transition-colors duration-300 hover:text-ember"
+            >
+              <span aria-hidden="true" className="grid h-8 w-8 place-items-center rounded-full border border-white/10 bg-white/5 transition-colors duration-300 group-hover:border-accent/40">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="3" />
+                  <path d="m3 6 9 7 9-7" />
+                </svg>
+              </span>
+              Prefer email? Write to us at{' '}
+              <span className="font-medium text-ink underline decoration-accent/40 decoration-2 underline-offset-4 transition-colors duration-300 group-hover:text-ember">
+                {EMAIL}
+              </span>
+            </a>
           </div>
         </Reveal>
 

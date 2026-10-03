@@ -1,4 +1,4 @@
-import { FORM_URL, NAV_LINKS } from '../lib/constants'
+import { EMAIL, FORM_URL, NAV_LINKS } from '../lib/constants'
 
 export default function Footer() {
   return (
@@ -13,6 +13,16 @@ export default function Footer() {
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
               "We build digital experiences powered by AI."
             </p>
+            <a
+              href={`mailto:${EMAIL}`}
+              className="mt-4 inline-flex items-center gap-2 text-sm text-muted transition-colors duration-300 hover:text-ember"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="3" />
+                <path d="m3 6 9 7 9-7" />
+              </svg>
+              {EMAIL}
+            </a>
             <a
               href={FORM_URL}
               target="_blank"

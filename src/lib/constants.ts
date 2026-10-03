@@ -1,6 +1,8 @@
 export const FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSeL8f2MVguTO1VD1PLsxH0kI3hEPZ4FOWyZ6aNvrmXq9_D31Q/viewform?usp=header'
 
+export const EMAIL = 'virat0270singh@gmail.com'
+
 export const SITE_URL = 'https://shreyansh0207.github.io/nexacraft/'
 
 export const NAV_LINKS = [
