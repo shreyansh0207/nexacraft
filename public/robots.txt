@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shreyansh0207.github.io/nexacraft/sitemap.xml
