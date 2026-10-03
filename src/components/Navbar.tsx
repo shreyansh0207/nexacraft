@@ -112,6 +112,7 @@ export default function Navbar() {
             href={DOCS_PDF}
             target="_blank"
             rel="noopener noreferrer"
+            title="What we offer (PDF)"
             className="btn-ghost hidden !px-4 !py-2.5 text-sm xl:inline-flex"
           >
             Docs
@@ -125,7 +126,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="btn-primary hidden !px-5 !py-2.5 text-sm md:inline-flex"
           >
-            Start a Project
+            Build Your Project
             <span aria-hidden="true">→</span>
           </a>
           <button
@@ -194,7 +195,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="btn-ghost justify-center !py-3 text-sm"
             >
-              Docs — Everything We Offer
+              Docs — What We Offer
               <span className="rounded-md bg-white/10 px-1.5 py-0.5 font-mono text-[0.55rem] font-bold uppercase tracking-[0.14em] text-muted">
                 PDF
               </span>
@@ -206,7 +207,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="btn-primary justify-center !py-3 text-sm"
             >
-              Start a Project <span aria-hidden="true">→</span>
+              Build Your Project <span aria-hidden="true">→</span>
             </a>
           </div>
         </nav>
