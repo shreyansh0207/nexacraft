@@ -3,6 +3,8 @@ export const FORM_URL =
 
 export const EMAIL = 'virat0270singh@gmail.com'
 
+export const DOCS_PDF = `${import.meta.env.BASE_URL}NexaCraft-Docs.pdf`
+
 export const SITE_URL = 'https://shreyansh0207.github.io/nexacraft/'
 
 export const NAV_LINKS = [

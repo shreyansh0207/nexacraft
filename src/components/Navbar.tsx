@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { FORM_URL, NAV_LINKS } from '../lib/constants'
+import { DOCS_PDF, NAV_LINKS } from '../lib/constants'
 
 function Logo() {
   return (
@@ -109,13 +109,15 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <a
-            href={FORM_URL}
+            href={DOCS_PDF}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary hidden !px-5 !py-2.5 text-sm md:inline-flex"
           >
-            Start a Project
-            <span aria-hidden="true">→</span>
+            Docs
+            <span className="rounded-md bg-black/25 px-1.5 py-0.5 font-mono text-[0.55rem] font-bold uppercase tracking-[0.14em]">
+              PDF
+            </span>
           </a>
           <button
             type="button"
@@ -171,7 +173,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href={FORM_URL}
+            href={DOCS_PDF}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
@@ -180,7 +182,10 @@ export default function Navbar() {
             }`}
             style={{ transitionDelay: open ? '560ms' : '0ms' }}
           >
-            Start a Project <span aria-hidden="true">→</span>
+            Docs — Everything We Offer
+            <span className="rounded-md bg-black/25 px-1.5 py-0.5 font-mono text-[0.55rem] font-bold uppercase tracking-[0.14em]">
+              PDF
+            </span>
           </a>
         </nav>
       </div>
