@@ -11,6 +11,7 @@ import CustomAgent from './components/CustomAgent'
 import AIVideo from './components/AIVideo'
 import Process from './components/Process'
 import Portfolio from './components/Portfolio'
+import Pricing from './components/Pricing'
 import TechStack from './components/TechStack'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -67,6 +68,7 @@ export default function App() {
         <AIVideo />
         <Process />
         <Portfolio />
+        <Pricing />
         <TechStack />
         <Contact />
       </main>

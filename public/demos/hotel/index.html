@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Amber Palm — Boutique Hotel (Demo by NexaCraft)</title>
+  <meta name="description" content="Demo boutique hotel website with animations — built by NexaCraft Digital Studio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="#top">
+        <span class="brand-mark">A</span>
+        <span class="brand-text">The Amber <em>Palm</em></span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#dining">Dining</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#reserve" class="nav-cta">Reserve a Stay</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-media">
+      <img src="images/hero.png" alt="The Amber Palm hotel glowing warmly at dusk" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content container">
+      <p class="hero-kicker reveal">Boutique Hotel · Coastal District</p>
+      <h1 class="reveal" data-delay="120">Evenings slow down<br /><em>by the water.</em></h1>
+      <p class="hero-sub reveal" data-delay="240">Twenty-two rooms of warm light, quiet courtyards and a rooftop
+        table that waits for sunset. A demo website by NexaCraft Digital Studio.</p>
+      <div class="hero-actions reveal" data-delay="360">
+        <a href="#reserve" class="btn btn-solid">Reserve a Stay</a>
+        <a href="#rooms" class="btn btn-line">Explore Rooms</a>
+      </div>
+    </div>
+    <a class="scroll-cue" href="#stats" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <section class="stats" id="stats">
+    <div class="container stats-grid">
+      <div class="stat reveal"><strong data-count="22">0</strong><span>Rooms &amp; suites</span></div>
+      <div class="stat reveal" data-delay="100"><strong data-count="4">0</strong><span>Dining spaces</span></div>
+      <div class="stat reveal" data-delay="200"><strong data-count="98">0</strong><span>% guest comfort score</span></div>
+      <div class="stat reveal" data-delay="300"><strong data-count="12">0</strong><span>Years of hosting</span></div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Infinity Pool</span><span>Rooftop Dining</span><span>Private Courtyards</span><span>Spa &amp; Sauna</span><span>Sunset Deck</span><span>Library Lounge</span>
+      <span>Infinity Pool</span><span>Rooftop Dining</span><span>Private Courtyards</span><span>Spa &amp; Sauna</span><span>Sunset Deck</span><span>Library Lounge</span>
+    </div>
+  </div>
+
+  <section class="section" id="rooms">
+    <div class="container">
+      <p class="section-kicker reveal">Stay</p>
+      <h2 class="section-title reveal" data-delay="80">Rooms built for <em>slow mornings</em></h2>
+      <div class="card-grid">
+        <article class="card reveal">
+          <div class="card-media"><img src="images/room.png" alt="Courtyard room with king bed and warm lamps" loading="lazy" decoding="async" /></div>
+          <div class="card-body">
+            <div class="card-row"><h3>Courtyard King</h3><span class="price">₹7,500 <small>/ night</small></span></div>
+            <p>Garden-facing room with a hand-carved headboard, rain shower and a reading nook by the window.</p>
+            <a class="card-link" href="#reserve">Check availability →</a>
+          </div>
+        </article>
+        <article class="card reveal" data-delay="120">
+          <div class="card-media"><img src="images/dining.png" alt="Sunset view from the rooftop dining space" loading="lazy" decoding="async" /></div>
+          <div class="card-body">
+            <div class="card-row"><h3>Sunset Suite</h3><span class="price">₹12,000 <small>/ night</small></span></div>
+            <p>Corner suite with a private terrace, soaking tub and an uninterrupted view of the evening sky.</p>
+            <a class="card-link" href="#reserve">Check availability →</a>
+          </div>
+        </article>
+        <article class="card reveal" data-delay="240">
+          <div class="card-media"><img src="images/hero.png" alt="Hotel pool glowing at dusk" loading="lazy" decoding="async" /></div>
+          <div class="card-body">
+            <div class="card-row"><h3>Pool Villa</h3><span class="price">₹18,500 <small>/ night</small></span></div>
+            <p>Standalone villa that opens straight onto the pool deck, with an outdoor rain shower and daybed.</p>
+            <a class="card-link" href="#reserve">Check availability →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature" id="dining">
+    <div class="container feature-grid">
+      <div class="feature-media reveal">
+        <img src="images/dining.png" alt="Candlelit rooftop restaurant at sunset" loading="lazy" decoding="async" />
+        <div class="feature-badge float"><span>Tonight</span>Sunset seating · 6:30 PM</div>
+      </div>
+      <div class="feature-text">
+        <p class="section-kicker reveal">Dining</p>
+        <h2 class="section-title reveal" data-delay="80">A table that waits<br />for <em>golden hour</em></h2>
+        <p class="reveal" data-delay="160">The rooftop kitchen works with the morning market — grilled catch,
+          wood-oven breads and a dessert menu that changes with the tide of the season.</p>
+        <ul class="ticks reveal" data-delay="240">
+          <li>Wood-fired coastal cuisine</li>
+          <li>Sommelier-curated cellar</li>
+          <li>Private dining for twelve</li>
+        </ul>
+        <a class="btn btn-solid reveal" data-delay="320" href="#reserve">Book a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experiences">
+    <div class="container">
+      <p class="section-kicker reveal">Experiences</p>
+      <h2 class="section-title reveal" data-delay="80">Days shaped around <em>the tide</em></h2>
+      <div class="exp-grid">
+        <div class="exp reveal"><span class="exp-num">01</span><h3>Dawn boat ride</h3><p>A quiet skiff out to the bay before the town wakes, coffee flask included.</p></div>
+        <div class="exp reveal" data-delay="100"><span class="exp-num">02</span><h3>Courtyard spa</h3><p>Open-air treatments under the frangipani tree, booked by the hour.</p></div>
+        <div class="exp reveal" data-delay="200"><span class="exp-num">03</span><h3>Market walk</h3><p>Walk the fish market with our chef and pick the evening's catch yourself.</p></div>
+        <div class="exp reveal" data-delay="300"><span class="exp-num">04</span><h3>Lantern evenings</h3><p>Friday nights on the deck — acoustic sets and lanterns on the water.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="reserve">
+    <div class="container cta-inner reveal">
+      <h2>Reserve your <em>slow evening.</em></h2>
+      <p>This is a demo booking flow — imagine your own booking form or AI concierge right here.</p>
+      <form class="booking" onsubmit="return false">
+        <label>Check-in <input type="date" /></label>
+        <label>Check-out <input type="date" /></label>
+        <label>Guests
+          <select><option>1 guest</option><option selected>2 guests</option><option>3 guests</option><option>4 guests</option></select>
+        </label>
+        <button class="btn btn-solid" type="submit">Check Availability</button>
+      </form>
+      <p class="demo-note">Demo website · built with animation by <a href="../../index.html#contact" target="_blank" rel="noopener">NexaCraft Digital Studio</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="brand-text">The Amber <em>Palm</em></p>
+        <p class="muted">14 Marina Lane, Coastal District<br />hello@amberpalm.example</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#rooms">Rooms</a><a href="#dining">Dining</a><a href="#experiences">Experiences</a><a href="#reserve">Reserve</a>
+      </nav>
+    </div>
+    <p class="copyright">© <span id="year"></span> The Amber Palm — a fictional demo hotel. Crafted as a sample website.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

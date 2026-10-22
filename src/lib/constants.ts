@@ -13,7 +13,67 @@ export const NAV_LINKS = [
   { label: 'AI Agents', href: '#agents' },
   { label: 'Automation', href: '#automation' },
   { label: 'Work', href: '#work' },
+  { label: 'Pricing', href: '#pricing' },
   { label: 'Contact', href: '#contact' },
+]
+
+export const DEMOS = {
+  hotel: `${import.meta.env.BASE_URL}demos/hotel/`,
+  furniture: `${import.meta.env.BASE_URL}demos/furniture/`,
+}
+
+export type PricingPlan = {
+  name: string
+  price: string
+  tagline: string
+  features: string[]
+  cta: string
+  featured?: boolean
+  badge?: string
+}
+
+export const PRICING_PLANS: PricingPlan[] = [
+  {
+    name: 'Quick Launch',
+    price: '₹999',
+    tagline: 'Animated website or a clean normal website — your choice.',
+    features: [
+      'Animated design or normal design',
+      'Fully mobile responsive',
+      'Your services & contact section',
+      'Live on your own link',
+      'Fast delivery',
+    ],
+    cta: 'Start with ₹999',
+  },
+  {
+    name: 'Website + AI Deal',
+    price: '₹3,000',
+    tagline: 'Your website plus 2 custom AI agents — and 1 more agent FREE.',
+    features: [
+      'Full animated website included',
+      '2 custom AI agents built for you',
+      '+1 extra agent FREE (3 total)',
+      'Agents wired into your website',
+      'Support, booking or sales agents',
+    ],
+    cta: 'Claim the Deal',
+    featured: true,
+    badge: 'Best Deal',
+  },
+  {
+    name: 'Signature Build',
+    price: '₹5,000',
+    tagline: 'Fully customized website with your own domain.',
+    features: [
+      'Custom design around your brand',
+      'Your domain name included',
+      'Premium animations & effects',
+      'AI features & integrations',
+      'Priority delivery & support',
+    ],
+    cta: 'Go Custom',
+  },
 ]
 
 export type Service = {
@@ -144,9 +204,27 @@ export type Project = {
   category: 'Websites' | '3D Web' | 'AI Agents' | 'Automation' | 'AI Video' | 'Integrations'
   desc: string
   hue: number
+  liveUrl?: string
+  img?: string
 }
 
 export const PROJECTS: Project[] = [
+  {
+    title: 'Hotel Amber Palm',
+    category: 'Websites',
+    desc: 'Live demo — animated boutique-hotel site: parallax hero, scroll reveals, counters and a booking flow.',
+    hue: 32,
+    liveUrl: DEMOS.hotel,
+    img: 'demos/hotel/images/hero.png',
+  },
+  {
+    title: 'Grain & Ember Woodshop',
+    category: 'Websites',
+    desc: 'Live demo — animated furniture-shop site: product cards, enquiry flow and a commission journey.',
+    hue: 26,
+    liveUrl: DEMOS.furniture,
+    img: 'demos/furniture/images/hero.png',
+  },
   {
     title: 'Aurora Commerce',
     category: 'Websites',

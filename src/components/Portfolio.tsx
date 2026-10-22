@@ -12,6 +12,15 @@ function Thumb({ item }: { item: Project }) {
         background: `linear-gradient(140deg, hsl(${h} 60% 13%), hsl(${(h + 50) % 360} 65% 7%))`,
       }}
     >
+      {item.img && (
+        <img
+          src={`${import.meta.env.BASE_URL}${item.img}`}
+          alt={`${item.title} demo preview`}
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-108"
+        />
+      )}
       <div
         className="absolute -left-10 -top-10 h-40 w-40 rounded-full blur-3xl transition-transform duration-700 group-hover:scale-125"
         style={{ background: `hsl(${h} 80% 50% / 0.22)` }}
@@ -20,23 +29,25 @@ function Thumb({ item }: { item: Project }) {
         className="absolute -bottom-12 -right-8 h-44 w-44 rounded-full blur-3xl"
         style={{ background: `hsl(${(h + 120) % 360} 80% 55% / 0.16)` }}
       />
-      <svg viewBox="0 0 200 100" className="absolute inset-0 h-full w-full opacity-35" aria-hidden="true">
-        <g fill="none" stroke={`hsl(${h} 80% 65%)`} strokeWidth="0.5">
-          {Array.from({ length: 7 }, (_, i) => (
-            <circle key={i} cx={40 + i * 22} cy={50 + Math.sin(i * 1.3) * 18} r={9 + i * 3.2} strokeOpacity={0.35} />
-          ))}
-        </g>
-      </svg>
+      {!item.img && (
+        <svg viewBox="0 0 200 100" className="absolute inset-0 h-full w-full opacity-35" aria-hidden="true">
+          <g fill="none" stroke={`hsl(${h} 80% 65%)`} strokeWidth="0.5">
+            {Array.from({ length: 7 }, (_, i) => (
+              <circle key={i} cx={40 + i * 22} cy={50 + Math.sin(i * 1.3) * 18} r={9 + i * 3.2} strokeOpacity={0.35} />
+            ))}
+          </g>
+        </svg>
+      )}
       <div className="absolute inset-0 grid place-items-center">
         <span
-          className="font-mono text-[0.58rem] font-bold uppercase tracking-[0.3em]"
+          className="rounded-full bg-black/45 px-3 py-1 font-mono text-[0.58rem] font-bold uppercase tracking-[0.3em] backdrop-blur-sm"
           style={{ color: `hsl(${h} 80% 72%)` }}
         >
           {item.category}
         </span>
       </div>
       <span className="glass absolute right-3 top-3 rounded-full px-2.5 py-1 font-mono text-[0.55rem] uppercase tracking-[0.2em] text-ink/75">
-        Demo concept
+        {item.liveUrl ? 'Live demo' : 'Demo concept'}
       </span>
     </div>
   )
@@ -95,6 +106,19 @@ export default function Portfolio() {
                     </span>
                   </div>
                   <p className="mt-2.5 text-sm leading-relaxed text-muted">{item.desc}</p>
+                  {item.liveUrl && (
+                    <a
+                      href={item.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-ember transition-all duration-300 hover:gap-3.5 hover:text-accent"
+                    >
+                      Open live demo
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M7 17 17 7M8 7h9v9" />
+                      </svg>
+                    </a>
+                  )}
                 </div>
               </article>
             </Reveal>

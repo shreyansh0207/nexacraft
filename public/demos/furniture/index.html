@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grain &amp; Ember — Handcrafted Wood Furniture (Demo by NexaCraft)</title>
+  <meta name="description" content="Demo wooden furniture shop website with animations — built by NexaCraft Digital Studio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="#top">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+            <path d="M12 3c-4 4-6 7-6 10a6 6 0 0 0 12 0c0-3-2-6-6-10Z" />
+            <path d="M12 9v9" />
+          </svg>
+        </span>
+        <span class="brand-text">Grain <em>&amp;</em> Ember</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#craft">The Craft</a></li>
+        <li><a href="#custom">Custom Orders</a></li>
+        <li><a href="#order" class="nav-cta">Order a Piece</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-media">
+      <img src="images/hero.png" alt="Grain and Ember workshop filled with handcrafted wooden furniture" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content container">
+      <p class="hero-kicker reveal">Handcrafted in solid wood</p>
+      <h1 class="reveal" data-delay="120">Furniture that carries<br /><em>the forest's warmth.</em></h1>
+      <p class="hero-sub reveal" data-delay="240">Every table, chair and bed leaves our workshop sanded by hand,
+        joined without shortcuts and finished with natural oil. A demo shop website by NexaCraft Digital Studio.</p>
+      <div class="hero-actions reveal" data-delay="360">
+        <a href="#collection" class="btn btn-solid">Browse the Collection</a>
+        <a href="#craft" class="btn btn-line">See How It's Made</a>
+      </div>
+    </div>
+    <a class="scroll-cue" href="#collection" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Solid Oak</span><span>American Walnut</span><span>Teak</span><span>Natural Oil Finish</span><span>Mortise &amp; Tenon Joints</span><span>Made to Order</span>
+      <span>Solid Oak</span><span>American Walnut</span><span>Teak</span><span>Natural Oil Finish</span><span>Mortise &amp; Tenon Joints</span><span>Made to Order</span>
+    </div>
+  </div>
+
+  <section class="section" id="collection">
+    <div class="container">
+      <p class="section-kicker reveal">The Collection</p>
+      <h2 class="section-title reveal" data-delay="80">Pieces made to <em>outlive trends</em></h2>
+      <div class="card-grid">
+        <article class="card reveal">
+          <div class="card-media"><img src="images/chair.png" alt="Walnut lounge chair with linen cushion" loading="lazy" decoding="async" /></div>
+          <div class="card-body">
+            <div class="card-row"><h3>Walnut Lounge Chair</h3><span class="price">₹24,500</span></div>
+            <p>Sculpted American walnut with a linen-cotton cushion. Mortise-and-tenon frame, no metal fixings.</p>
+            <button class="card-link add-cart" type="button">Add to enquiry →</button>
+          </div>
+        </article>
+        <article class="card reveal" data-delay="120">
+          <div class="card-media"><img src="images/table.png" alt="Live-edge solid oak dining table" loading="lazy" decoding="async" /></div>
+          <div class="card-body">
+            <div class="card-row"><h3>Live-Edge Oak Table</h3><span class="price">₹68,000</span></div>
+            <p>A single slab of seasoned oak, flattened and finished with hard-wax oil. Seats six comfortably.</p>
+            <button class="card-link add-cart" type="button">Add to enquiry →</button>
+          </div>
+        </article>
+        <article class="card reveal" data-delay="240">
+          <div class="card-media"><img src="images/hero.png" alt="Workshop bench among finished pieces" loading="lazy" decoding="async" /></div>
+          <div class="card-body">
+            <div class="card-row"><h3>Workshop Bench</h3><span class="price">₹31,500</span></div>
+            <p>Reclaimed teak bench with through-wedged tenons — a hallway piece that earns its keep.</p>
+            <button class="card-link add-cart" type="button">Add to enquiry →</button>
+          </div>
+        </article>
+      </div>
+      <p class="enquiry-note reveal" id="enquiry-note" role="status"></p>
+    </div>
+  </section>
+
+  <section class="feature" id="craft">
+    <div class="container feature-grid">
+      <div class="feature-text">
+        <p class="section-kicker reveal">The Craft</p>
+        <h2 class="section-title reveal" data-delay="80">Eight weeks,<br /><em>four hands,</em> one tree</h2>
+        <p class="reveal" data-delay="160">We buy felled timber from certified plantations, season it in our yard
+          for months, then let the grain decide the piece. Nothing is rushed; everything is signed.</p>
+        <ul class="ticks reveal" data-delay="240">
+          <li>Kiln &amp; air seasoned hardwoods</li>
+          <li>Traditional joinery — no shortcuts</li>
+          <li>Food-safe natural oil finishes</li>
+        </ul>
+        <a class="btn btn-solid reveal" data-delay="320" href="#order">Commission a Piece</a>
+      </div>
+      <div class="feature-media reveal" data-delay="120">
+        <img src="images/hero.png" alt="Sunlight falling across the Grain and Ember workshop" loading="lazy" decoding="async" />
+        <div class="feature-badge float"><span>This week</span>3 slots open for custom builds</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="custom">
+    <div class="container">
+      <p class="section-kicker reveal">Custom Orders</p>
+      <h2 class="section-title reveal" data-delay="80">From a sketch<br />to <em>your doorway</em></h2>
+      <div class="steps">
+        <div class="step reveal"><span>01</span><h3>Share the sketch</h3><p>Photos, rough drawings or just dimensions — we start wherever you are.</p></div>
+        <div class="step reveal" data-delay="100"><span>02</span><h3>Wood &amp; quote</h3><p>Pick your species; we send grain photos and a fixed quote within days.</p></div>
+        <div class="step reveal" data-delay="200"><span>03</span><h3>The build</h3><p>Progress photos every week while your piece takes shape in the workshop.</p></div>
+        <div class="step reveal" data-delay="300"><span>04</span><h3>White-glove delivery</h3><p>Blanket-wrapped, carried in and placed exactly where you want it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="order">
+    <div class="container cta-inner reveal">
+      <h2>Bring a piece <em>home.</em></h2>
+      <p>This is a demo order flow — imagine your own catalogue, cart or AI sales assistant right here.</p>
+      <form class="order" onsubmit="return false">
+        <label>Piece
+          <select>
+            <option>Walnut Lounge Chair — ₹24,500</option>
+            <option>Live-Edge Oak Table — ₹68,000</option>
+            <option>Workshop Bench — ₹31,500</option>
+            <option>Fully custom build</option>
+          </select>
+        </label>
+        <label>City <input type="text" placeholder="Where should we deliver?" /></label>
+        <button class="btn btn-solid" type="submit">Request a Quote</button>
+      </form>
+      <p class="demo-note">Demo website · built with animation by <a href="../../index.html#contact" target="_blank" rel="noopener">NexaCraft Digital Studio</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="brand-text">Grain <em>&amp;</em> Ember</p>
+        <p class="muted">Sawmill Road, Timber Yard 7<br />hello@grainember.example</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#collection">Collection</a><a href="#craft">The Craft</a><a href="#custom">Custom Orders</a><a href="#order">Order</a>
+      </nav>
+    </div>
+    <p class="copyright">© <span id="year"></span> Grain &amp; Ember — a fictional demo woodshop. Crafted as a sample website.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
