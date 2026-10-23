@@ -48,7 +48,7 @@ export const PRICING_PLANS: PricingPlan[] = [
   },
   {
     name: 'Website + AI Deal',
-    price: '₹3,000',
+    price: '₹2,999',
     tagline: 'Your website plus 2 custom AI agents — and 1 more agent FREE.',
     features: [
       'Full animated website included',
@@ -63,7 +63,7 @@ export const PRICING_PLANS: PricingPlan[] = [
   },
   {
     name: 'Signature Build',
-    price: '₹5,000',
+    price: '₹4,999',
     tagline: 'Fully customized website with your own domain.',
     features: [
       'Custom design around your brand',
